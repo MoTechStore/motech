@@ -1,0 +1,21 @@
+{% load static %}
+<link href="{% static 'blog/css/header.css' %}" rel="stylesheet">
+<link href="{% static 'blog/css/bootstrap.min.css' %}" rel="stylesheet">
+<nav class="navbar navbar-inverse" style="background-color: #152238">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'home' %}">Home</a>
+    </div>
+      <ul class="nav navbar-nav navbar-right">
+      <p style="color: white">Logged In As {{ user.username }}</p>
+      <p style="color: white">User Id {{ user_id }}</p>
+     <a href="{% url 'logout' %}">Logout</a>
+
+  </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+
+

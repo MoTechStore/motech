@@ -1,0 +1,55 @@
+{% load static %}
+<div class="container">
+<div class="row">
+<div class="col-md-1 col-sm-4 col-xs-4">
+ <h1></h1>
+  </div>
+    <div class="col-md-5 col-sm-4 col-xs-4">
+       <div class="panel panel-default">
+            <div class="panel-heading">
+            <div class="card-header">
+                    <i class="fas fa-table"></i>
+                    Add Vehicle
+                </div>
+            </div>
+            <div class="panel-body">
+                    <form method="POST" action="{% url 'savedata' %}" enctype="multipart/form-data" accept-charset="UTF-8" class="test-form">
+                        {% csrf_token %}
+                    <div class="form-group">
+                    <label>Customer Name</label>
+                    <input class="form-control" name="from_date" type="text" required="">
+                    </div>
+                     <div class="form-group">
+                    <label>Customer Name</label>
+                    <input class="form-control" name="from_date" type="text" required="">
+                    </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" type="submit" value="Save">
+                        </div>
+                    </form>
+                 <form method="POST" action="{% url 'pay' %}" enctype="multipart/form-data" accept-charset="UTF-8" class="test-form">
+                        {% csrf_token %}
+                    <div class="form-group">
+                    <label>Customer Name</label>
+                    <input class="form-control" name="from_date" type="text" required="">
+                    </div>
+                     <div class="form-group">
+                    <label>Customer Name</label>
+                    <input class="form-control" name="from_date" type="text" required="">
+                    </div>
+                        <div class="form-group">
+                            <input class="btn btn-primary" type="submit" value="Pay">
+                        </div>
+                    </form>
+
+            </div>
+        </div>
+    </div>   
+</div>   
+    <script type="text/javascript" src="{% static 'js/jquery-2.1.3.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'js/jquery.dataTables.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>

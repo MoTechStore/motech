@@ -1,0 +1,40 @@
+<form id="register-form" name="register-form" class="nobottommargin" action="{% url 'reg' %}" method="post">
+            {% csrf_token %}
+      <div class="col_half">
+        <label for="register-form-name">First Name:</label>
+        <input type="text" id="register-form-name" name="first_name" value="" class="form-control"/>
+      </div>
+  
+      <div class="col_half col_last">
+        <label for="register-form-name">Last Name:</label>
+	    <input type="text" id="register-form-name" name="last_name" value="" class="form-control" />
+      </div>
+  
+      <div class="col_half">
+        <label for="register-form-email">Email Address:</label>
+        <input type="text"  name="username" value="" class="form-control" />
+      </div>
+  
+      <!-- <div class="clear"></div> -->
+  
+      <div class="col_half col_last">
+        <label for="register-form-username">Choose a Username:</label>
+        <input type="text" id="register-form-username" name="username" value="" class="form-control" />
+      </div>
+  
+      <div class="col_half">
+        <label for="register-form-password">Choose Password:</label>
+        <input type="password" id="register-form-password" name="password" value="" class="form-control" />
+      </div>
+      <div class="clear"></div>
+      <select name="user_type" id="cars">
+  <option value="is_admin">Admin</option>
+  <option value="is_cashier">Cashier</option>
+  <option value="is_register">Register</option>
+</select>
+  
+      <div class="col_full nobottommargin">
+        <button class="button button-3d button-black nomargin" id="register-form-submit" name="register-form-submit" value="register">Register Now</button>
+      </div>
+
+</form>

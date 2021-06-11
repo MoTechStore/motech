@@ -1,0 +1,41 @@
+{% load static %}
+<html>
+<head>
+    <title> Django </title> 
+<link href="{% static 'blog/css/style.css' %}" rel="stylesheet">
+<link href="{% static 'blog/css/image.jpg' %}" rel="stylesheet">
+
+
+</head>
+    <body>
+    <div class="login-box">
+        <h1>User Registration</h1>
+            <form method="POST" action="{% url 'registeruser' %}">    
+            {% csrf_token %}
+            <p>Firstname</p>
+            <input type="text" name="username" placeholder="Enter Username" required="">
+            <p>Email</p>
+            <input type="email" name="email" placeholder="Enter Email" required="">
+
+            <p>Password</p>
+            <input type="password" name="password" placeholder="Enter Password" required="">
+        
+           <br>
+            <input type="submit" name="submit" value="Register">
+            <a href="{% url 'loginform' %}" style="font-weight: bold; font-size: 20px">Login Here</a>
+               <div class="form-group">
+            {% if messages %}
+            <div class="messages">
+                {% for message in messages %}
+
+                    <div class="alert alert-success" style="color:red;"> {{ message }}</div>
+
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        <br>
+            </form>
+        </div>    
+    </body>
+</html>
