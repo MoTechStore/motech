@@ -1,0 +1,14 @@
+employee,gender,salary,department,country
+Foo Bar,Male,40000,Finance,USA
+Michael Jackson,Male,32000,Finance,Brazil
+Mike Tyson,Male,45000,Legal,Italy
+Chris Brown,Male,54000,Legal,USA
+Drake,Male,72000,IT,USA
+Naymar,Male,62000,IT,Brazil
+Zidane,Male,92000,Marketing,Tanzania
+Firmino,Male,55000,Administration,Kenya
+Salah,Male,60000,IT,Uganda
+Alexander,Male,99000,IT,Spain
+Demoses,Male,35000,Security,Spain
+Ava,Female,48000,HR,USA
+Beyonce,Female,35000,HR,USA
